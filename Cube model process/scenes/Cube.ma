@@ -1,6 +1,6 @@
 //Maya ASCII 2017 scene
 //Name: Cube.ma
-//Last modified: Wed, Sep 14, 2016 12:18:40 PM
+//Last modified: Wed, Sep 14, 2016 12:20:23 PM
 //Codeset: UTF-8
 requires maya "2017";
 currentUnit -l centimeter -a degree -t film;
@@ -198,6 +198,19 @@ createNode polyExtrudeFace -n "polyExtrudeFace1";
 	setAttr ".tk" 2.4000000953674316;
 	setAttr ".cbn" -type "double3" 2.273295559263893 -2.273295559263893 -2.273295559263893 ;
 	setAttr ".cbx" -type "double3" 2.273295559263893 2.273295559263893 2.273295559263893 ;
+createNode polyExtrudeFace -n "polyExtrudeFace2";
+	rename -uid "7CE1985E-5445-9BDC-E04C-9786664C1BF9";
+	setAttr ".ics" -type "componentList" 2 "f[1]" "f[8]";
+	setAttr ".ix" -type "matrix" 4.5465911185277861 0 0 0 0 4.5465911185277861 0 0 0 0 4.5465911185277861 0
+		 0 0 0 1;
+	setAttr ".ws" yes;
+	setAttr ".pvt" -type "float3" 1.1999998 2.2732956 0 ;
+	setAttr ".rs" 1218701994;
+	setAttr ".off" 1.5;
+	setAttr ".c[0]"  0 1 1;
+	setAttr ".tk" 3.2000000476837158;
+	setAttr ".cbn" -type "double3" -2.273295559263893 2.273295559263893 -2.273295559263893 ;
+	setAttr ".cbx" -type "double3" 4.673295125384656 2.273295559263893 2.273295559263893 ;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -228,7 +241,7 @@ select -ne :hardwareRenderGlobals;
 	setAttr ".btrs" 512;
 select -ne :ikSystem;
 	setAttr -s 4 ".sol";
-connectAttr "polyExtrudeFace1.out" "pCubeShape1.i";
+connectAttr "polyExtrudeFace2.out" "pCubeShape1.i";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
@@ -237,6 +250,8 @@ connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
 connectAttr "polyCube1.out" "polyExtrudeFace1.ip";
 connectAttr "pCubeShape1.wm" "polyExtrudeFace1.mp";
+connectAttr "polyExtrudeFace1.out" "polyExtrudeFace2.ip";
+connectAttr "pCubeShape1.wm" "polyExtrudeFace2.mp";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "pCubeShape1.iog" ":initialShadingGroup.dsm" -na;
 // End of Cube.ma
