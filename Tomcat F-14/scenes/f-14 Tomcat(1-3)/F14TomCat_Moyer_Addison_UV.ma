@@ -1,6 +1,6 @@
 //Maya ASCII 2017 scene
 //Name: F14TomCat_Moyer_Addison_UV.ma
-//Last modified: Sat, Oct 01, 2016 10:41:21 PM
+//Last modified: Sat, Oct 01, 2016 10:46:35 PM
 //Codeset: 1252
 requires maya "2017";
 currentUnit -l centimeter -a degree -t film;
@@ -13,8 +13,8 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "4204A23E-AD4E-D0A1-D9B4-BEA82B4C5FB9";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -3.6757022336203167 6.5602333748025092 -3.5848296232401324 ;
-	setAttr ".r" -type "double3" 270.46170602837196 534.7997118170158 0.00064990784879709492 ;
+	setAttr ".t" -type "double3" 11.090801305355303 20.864884654873329 22.492404756065952 ;
+	setAttr ".r" -type "double3" 322.0612794471885 749.59971181459514 -0.00074437575080125052 ;
 	setAttr ".rp" -type "double3" 4.4408920985006262e-016 -8.8817841970012523e-016 0 ;
 	setAttr ".rpt" -type "double3" 1.0924430976504731e-014 -4.4164621278311117e-015 
 		4.1732037360198285e-015 ;
@@ -23,7 +23,7 @@ createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".pze" yes;
 	setAttr ".fl" 26.633575184345478;
-	setAttr ".coi" 9.0106653217503503;
+	setAttr ".coi" 37.922122919678515;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -9606,7 +9606,7 @@ createNode mesh -n "polySurfaceShape130" -p "polySurface130";
 	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:399]";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" -0.49432925846321263 -0.50422764832948153 ;
+	setAttr ".pv" -type "double2" -0.1457291841506958 0.00094658136367797852 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr -s 462 ".uvst[0].uvsp";
 	setAttr ".uvst[0].uvsp[0:249]" -type "float2" -0.57097381 -0.17625909 -0.59315795
@@ -13292,7 +13292,7 @@ createNode mesh -n "polySurfaceShape69" -p "polySurface109";
 	setAttr -s 2 ".iog[0].og";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" -1.2781013145339477 1.5793980072409324 ;
+	setAttr ".pv" -type "double2" 0.55814462900161743 0.52988076210021973 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
