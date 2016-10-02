@@ -1,6 +1,6 @@
 //Maya ASCII 2017 scene
 //Name: F14TomCat_Moyer_Addison_UV.ma
-//Last modified: Sat, Oct 01, 2016 10:46:35 PM
+//Last modified: Sat, Oct 01, 2016 11:02:18 PM
 //Codeset: 1252
 requires maya "2017";
 currentUnit -l centimeter -a degree -t film;
@@ -14242,18 +14242,6 @@ createNode groupId -n "groupId239";
 createNode groupId -n "groupId247";
 	rename -uid "EE9104E4-4175-029A-12FC-C9BF892DEBD0";
 	setAttr ".ihi" 0;
-createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
-	rename -uid "AFF9F2A9-C142-C573-3BE5-DD9A0047DE63";
-	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
-	setAttr ".tgi[0].vl" -type "double2" -365.11324940090617 -326.20984539125305 ;
-	setAttr ".tgi[0].vh" -type "double2" 2.7816317767056375 49.16533836113453 ;
-	setAttr -s 2 ".tgi[0].ni";
-	setAttr ".tgi[0].ni[0].x" -485.71429443359375;
-	setAttr ".tgi[0].ni[0].y" -68.571426391601563;
-	setAttr ".tgi[0].ni[0].nvs" 1923;
-	setAttr ".tgi[0].ni[1].x" -178.57142639160156;
-	setAttr ".tgi[0].ni[1].y" -45.714286804199219;
-	setAttr ".tgi[0].ni[1].nvs" 1923;
 createNode groupId -n "groupId286";
 	rename -uid "95F91671-7544-26B4-06AF-7CBB93F3C584";
 	setAttr ".ihi" 0;
@@ -14868,6 +14856,18 @@ createNode polyTweakUV -n "polyTweakUV9";
 		 -0.26921576 -0.58110863 -0.2680341 -0.5667935 -0.27854216 -0.53934294 -0.33775961
 		 -0.55765694 -0.28565538 -0.54813474 -0.33880824 -0.55676061 -0.36194432 -0.8427766
 		 0.06972339 -0.83237839 0.056730889 -0.83219713 0.056339346 -0.83527076 0.016474444;
+createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
+	rename -uid "65DD6024-48B9-0E2F-3A2F-92BE8B64B83A";
+	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
+	setAttr ".tgi[0].vl" -type "double2" -365.47617595347208 -327.6176944773988 ;
+	setAttr ".tgi[0].vh" -type "double2" 3.5714284295127645 49.046276975403771 ;
+	setAttr -s 2 ".tgi[0].ni";
+	setAttr ".tgi[0].ni[0].x" -178.57142639160156;
+	setAttr ".tgi[0].ni[0].y" -45.714286804199219;
+	setAttr ".tgi[0].ni[0].nvs" 1923;
+	setAttr ".tgi[0].ni[1].x" -485.71429443359375;
+	setAttr ".tgi[0].ni[1].y" -68.571426391601563;
+	setAttr ".tgi[0].ni[1].nvs" 1923;
 select -ne :time1;
 	setAttr ".o" 88;
 	setAttr ".unw" 88;
@@ -15004,10 +15004,6 @@ connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
 connectAttr "place2dTexture1.o" "checker1.uv";
 connectAttr "place2dTexture1.ofs" "checker1.fs";
-connectAttr "place2dTexture1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
-		;
-connectAttr "checker1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
-		;
 connectAttr "groupParts1.og" "polyFlipUV1.ip";
 connectAttr "polySurfaceShape59.wm" "polyFlipUV1.mp";
 connectAttr "polySurfaceShape135.o" "groupParts1.ig";
@@ -15060,6 +15056,10 @@ connectAttr "groupId379.id" "groupParts6.gi";
 connectAttr "polyFlipUV6.out" "polyFlipUV7.ip";
 connectAttr "polySurfaceShape61.wm" "polyFlipUV7.mp";
 connectAttr "polyFlipUV7.out" "polyTweakUV9.ip";
+connectAttr "checker1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
+		;
+connectAttr "place2dTexture1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
+		;
 connectAttr "place2dTexture1.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "checker1.msg" ":defaultTextureList1.tx" -na;
