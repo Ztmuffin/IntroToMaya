@@ -1,6 +1,6 @@
 //Maya ASCII 2017 scene
 //Name: F14TomCat_Moyer_Addison_UV_and_move.ma
-//Last modified: Fri, Oct 07, 2016 11:41:38 PM
+//Last modified: Fri, Oct 07, 2016 11:44:06 PM
 //Codeset: 1252
 requires maya "2017";
 requires "stereoCamera" "10.0";
@@ -15,8 +15,8 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "4204A23E-AD4E-D0A1-D9B4-BEA82B4C5FB9";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 1.6046449327544474 49.158615113937898 -22.884295765771043 ;
-	setAttr ".r" -type "double3" 652.86177425082053 -178.20036567267229 0.00063197327054749898 ;
+	setAttr ".t" -type "double3" -16.219733220833014 31.935944738672188 35.831024177592049 ;
+	setAttr ".r" -type "double3" 683.46209945962687 -25.800365670876538 -0.00070159983861963729 ;
 	setAttr ".rp" -type "double3" 3.3306690738754696e-016 1.1102230246251565e-016 1.7763568394002505e-015 ;
 	setAttr ".rpt" -type "double3" 1.5015974326330187e-014 -6.852514868525834e-015 3.839184861876137e-015 ;
 createNode camera -s -n "perspShape" -p "persp";
